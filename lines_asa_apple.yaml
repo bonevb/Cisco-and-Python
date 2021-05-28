@@ -1,0 +1,12 @@
+- name: Update cisco asa object-group
+  hosts: oldvpn_asa
+  gather_facts: no
+  connection: local
+
+  tasks:
+    - name: updating the object-group
+      asa_config:
+        parents: ['object-group network apple_srv']
+        lines: "{{ item }}"
+      with_lines: cat /home/boby/asa_test/dns
+        
