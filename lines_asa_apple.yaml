@@ -1,10 +1,10 @@
-- name: Update cisco asa object-group
+- name: Update Cisco ASA object-group
   hosts: oldvpn_asa
   gather_facts: no
   connection: local
 
   tasks:
-    - name: updating the object-group
+    - name: Updating the object-group
       asa_config:
         parents: ['object-group network apple_srv']
         lines: "{{ item }}"

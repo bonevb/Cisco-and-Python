@@ -34,10 +34,10 @@ def save_to_db(ip):
     db.commit()
     print(ip + 'saved')
 
-print('the ip address is: ', check_ip(ip))
+#print('the ip address is: ', check_ip(ip))
 
 if check_ip(ip) is None:
-    print('ip is not into DB')
+    #print('ip is not into DB')
     save_to_db(ip)
 
 
